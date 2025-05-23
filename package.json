@@ -1,0 +1,20 @@
+{
+  "name": "goatui-docs",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build --logLevel error",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/mdx": "^3.1.0",
+    "astro": "^4.9.2",
+    "sass": "^1.77.4",
+    "typescript": "^5.4.5"
+  }
+}

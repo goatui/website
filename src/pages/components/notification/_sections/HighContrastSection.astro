@@ -1,0 +1,23 @@
+---
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import NotificationContent from './notification-content.astro';
+---
+<goat-text type='body' expressive>High contrast notifications are designed to be more accessible for users with visual
+  impairments. They have a higher contrast ratio between the text and background color.
+</goat-text>
+
+
+<HighlighterCard lang={'html'} cssClasses='notification-container'>
+  <goat-notification high-contrast dismissible>
+    <NotificationContent />
+  </goat-notification>
+  <goat-notification high-contrast state='success'>
+    <NotificationContent />
+  </goat-notification>
+  <goat-notification high-contrast state='warning'>
+    <NotificationContent />
+  </goat-notification>
+  <goat-notification high-contrast state='error'>
+    <NotificationContent />
+  </goat-notification>
+</HighlighterCard>

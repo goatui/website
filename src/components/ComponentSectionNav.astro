@@ -1,0 +1,44 @@
+---
+interface Props {
+  sections: any;
+}
+
+const {sections} = Astro.props;
+---
+<div class="section-nav">
+
+  <goat-menu class="js-scroll-nav"  layer='01'>
+    {sections.map((section: any) => (
+      <goat-menu-item layer='01'>
+        <goat-link class="link no-style" href={`#section-${section.title.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")}`}>{section.title}</goat-link>
+      </goat-menu-item>
+    ))
+    }
+  </goat-menu>
+
+
+  <ins class="adsbygoogle"
+       data-ad-client="ca-pub-3120721550776061"
+       data-ad-slot="1398164690"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script is:inline>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    const interval = window.setInterval(() => {
+      if (window.document.documentElement.classList.contains("hydrated")) {
+        window.clearInterval(interval);
+
+        setTimeout(function() {
+          const script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3120721550776061';
+          script.crossOrigin = 'anonymous';
+          script.async = true;
+          document.body.appendChild(script);
+        }, 800);
+
+      }
+    }, 300);
+  </script>
+
+</div>

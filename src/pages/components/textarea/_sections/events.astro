@@ -1,0 +1,33 @@
+---
+import Highlighter from '../../../../components/Highlighter.astro';
+---
+<goat-text type='body'>On input change a <b>CustomEvent</b> <code class='highlighter-rouge'
+                                                                  data-lang='html'>goat-textarea--change</code> is triggered by
+  the element.
+</goat-text>
+
+
+<goat-card>
+  <goat-card-content>
+    <goat-textarea variant='default' id='name-input-field'></goat-textarea>
+
+    <script is:inline>
+      document.querySelector('#name-input-field').addEventListener('goat-textarea--input', function(event) {
+        myConsole.log(event.target.value, event.type);
+      });
+      document.querySelector('#name-input-field').addEventListener('goat-textarea--change', function(event) {
+        myConsole.warn(event.target.value, event.type);
+      });
+    </script>
+  </goat-card-content>
+  <goat-card-content class='no-padding'>
+    <Highlighter lang='javascript' is:raw>
+      document.querySelector('#name-input-field').addEventListener('goat-textarea--input', function(event) {
+        myConsole.log(event.target.value, event.type);
+      });
+      document.querySelector('#name-input-field').addEventListener('goat-textarea--change', function(event) {
+        myConsole.warn(event.target.value, event.type);
+      });
+    </Highlighter>
+  </goat-card-content>
+</goat-card>

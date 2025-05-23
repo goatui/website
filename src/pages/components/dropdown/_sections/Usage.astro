@@ -1,0 +1,22 @@
+---
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import MenuItems from './dropdown-menu.astro';
+---
+
+<HighlighterCard lang='html'>
+
+  <goat-dropdown>
+    <goat-button color='secondary' icon='overflow-menu--vertical'></goat-button>
+
+    <MenuItems/>
+  </goat-dropdown>
+</HighlighterCard>
+
+<HighlighterCard lang='html'>
+  <goat-dropdown id='dropdown' placements='bottom-end'>
+    <goat-button color='secondary' variant='ghost' icon='overflow-menu--vertical'></goat-button>
+
+    <MenuItems/>
+  </goat-dropdown>
+</HighlighterCard>
+
